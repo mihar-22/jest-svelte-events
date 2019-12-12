@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.5](https://github.com/mihar-22/jest-svelte-events/compare/v1.0.4...v1.0.5) (2019-12-12)
+
+
+### Bug Fixes
+
+* use jest equality check over underscore ([39a91ba](https://github.com/mihar-22/jest-svelte-events/commit/39a91ba1a25b948955b68fcaaada6349f64bda28))
+
 ### [1.0.4](https://github.com/mihar-22/jest-svelte-events/compare/v1.0.3...v1.0.4) (2019-12-12)
 
 
