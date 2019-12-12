@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`listen can listen to multiple events 1`] = `
+Object {
+  "e1": Object {
+    "calls": 1,
+    "payloads": Array [
+      null,
+    ],
+  },
+  "e2": Object {
+    "calls": 1,
+    "payloads": Array [
+      50,
+    ],
+  },
+  "e3": Object {
+    "calls": 1,
+    "payloads": Array [
+      100,
+    ],
+  },
+  "stack": Array [
+    "e1",
+    "e2",
+    "e3",
+  ],
+}
+`;
+
+exports[`listen firing event should keep track of calls, payloads and stack 1`] = `
+Object {
+  "e1": Object {
+    "calls": 2,
+    "payloads": Array [
+      null,
+      null,
+    ],
+  },
+  "e2": Object {
+    "calls": 1,
+    "payloads": Array [
+      50,
+    ],
+  },
+  "stack": Array [
+    "e1",
+    "e1",
+    "e2",
+  ],
+}
+`;
+
+exports[`listen getEventData returns event data 1`] = `
+Object {
+  "calls": 0,
+  "payloads": Array [],
+}
+`;
+
+exports[`listen getEventData throws error when event has no listener registered 1`] = `
+"There are no listeners for the event \`e2\` on this component, setup the listener before calling the matcher.
+
+Eg: listen(component, 'myEvent')
+
+"
+`;
+
+exports[`listen getListener returns listener 1`] = `
+Object {
+  "e1": Object {
+    "calls": 0,
+    "payloads": Array [],
+  },
+  "stack": Array [],
+}
+`;
+
+exports[`listen getListener throws error when component has not been registered 1`] = `
+"This component has not been registered and has no listeners, setup the listener before calling the matcher.
+
+Eg: listen(component, 'myEvent')
+
+"
+`;
+
+exports[`listen listening to component should add it to listeners object 1`] = `
+Object {
+  "e1": Object {
+    "calls": 0,
+    "payloads": Array [],
+  },
+  "stack": Array [],
+}
+`;

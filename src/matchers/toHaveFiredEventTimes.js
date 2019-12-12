@@ -1,5 +1,5 @@
 import { matcherHint, printExpected, printReceived } from 'jest-matcher-utils'
-import { getListener, getEventData } from '../utils/getters'
+import { getListener, getEventData } from '../listen'
 
 const pluralize = count => `time${count === 1 ? '' : 's'}`
 

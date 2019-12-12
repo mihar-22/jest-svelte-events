@@ -1,38 +1,8 @@
 import matchers from './matchers'
+import { listen } from './listen'
 
-let listeners
-let disposals
-
-beforeEach(() => {
-  listeners = {}
-  global.SVELTE_LISTENERS = listeners
-  disposals = []
-})
-
-afterEach(() => { disposals.forEach(fn => fn()) })
-
-global.listen = (component, event) => {
-  if (Array.isArray(event)) {
-    event.forEach(e => listen(component, e))
-    return
-  }
-
-  if (!listeners[component]) {
-    listeners[component] = {}
-    listeners[component].stack = []
-  }
-
-  if (listeners[component][event]) return
-
-  listeners[component][event] = { payloads: [], calls: 0 }
-
-  const off = component.$on(event, e => {
-    listeners[component].stack.push(event)
-    listeners[component][event].payloads.push(e.detail)
-    listeners[component][event].calls += 1
-  })
-
-  disposals.push(off)
+if (global.listen === undefined) {
+  global.listen = listen
 }
 
 if (global.expect !== undefined) {

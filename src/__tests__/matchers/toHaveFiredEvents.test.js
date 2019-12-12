@@ -1,7 +1,5 @@
 import '../../'
-
 import { render, fireEvent } from '@testing-library/svelte'
-
 import Comp from '../fixtures/Comp.svelte'
 
 describe('.toHaveFiredEvents', () => {

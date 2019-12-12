@@ -1,5 +1,5 @@
 import { matcherHint, printExpected, printReceived } from 'jest-matcher-utils'
-import { getListener } from '../utils/getters'
+import { getListener } from '../listen'
 import { isEqual } from 'underscore'
 
 export default function toHaveFiredEventsInOrder (component, events) {

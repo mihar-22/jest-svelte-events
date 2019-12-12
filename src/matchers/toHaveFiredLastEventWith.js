@@ -1,5 +1,5 @@
 import { printExpected, printReceived } from 'jest-matcher-utils'
-import { getListener } from '../utils/getters'
+import { getListener } from '../listen'
 
 import { buildMessage } from './toHaveFiredEventWith'
 

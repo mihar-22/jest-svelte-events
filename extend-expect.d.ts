@@ -1,8 +1,9 @@
 import { SvelteComponent } from 'svelte/types/runtime'
+import { global } from '@types/jest'
+
+declare function listen<T extends SvelteComponent>(component: T, event: string | string[])
 
 declare namespace jest {
-  function listen<T extends SvelteComponent>(component: T, event: string | string[])
-  
   interface Matchers<R, T> {
     toHaveFiredEvent(event: string): R
     toHaveFiredEvents(events: string[]): R
