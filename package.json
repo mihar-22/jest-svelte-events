@@ -1,6 +1,6 @@
 {
   "name": "jest-svelte-events",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Custom Jest matchers to test Svelte events",
   "main": "dist/index.js",
   "license": "MIT",
