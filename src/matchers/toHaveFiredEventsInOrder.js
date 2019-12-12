@@ -1,10 +1,9 @@
 import { getListener } from '../listen'
-import { isEqual } from 'underscore'
 
 export default function toHaveFiredEventsInOrder (component, events) {
   const { matcherHint, printExpected, printReceived } = this.utils
   const listener = getListener(component)
-  const pass = isEqual(listener.stack, events)
+  const pass = this.equals(listener.stack, events)
   const options = { isNot: this.isNot }
   const hint = matcherHint('toHaveFiredEventsInOrder', 'component', undefined, options)
   const expectedMsg = not =>

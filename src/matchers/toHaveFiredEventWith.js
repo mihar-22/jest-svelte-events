@@ -1,9 +1,9 @@
 import { getListener, getEventData } from '../listen'
-import { isEqual } from 'underscore'
 
 export function buildMessage (name, options, component, event, payload, showPayloads = false) {
   const { matcherHint, printExpected, printReceived } = this.utils
   const isNot = options.isNot
+  const isEqual = this.equals
   const listener = getListener(component)
   const eventData = getEventData(listener, event)
   const pass = eventData.payloads.some(p => isEqual(p, payload))

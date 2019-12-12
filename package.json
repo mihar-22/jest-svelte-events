@@ -47,9 +47,7 @@
   "peerDependencies": {
     "svelte": ">= 3"
   },
-  "dependencies": {
-    "underscore": "^1.9.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",
