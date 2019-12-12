@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`.not.toHaveFiredLastEventWith fails when last event fires with the correct payload 1`] = `
+"[2mexpect([22m[31mcomponent[39m[2m).[22mnot[2m.[22mtoHaveFiredLastEventWith[2m([22m[32mexpected[39m[2m)[22m
+
+Expected not to have fired with: [32m50[39m
+
+Event: e2
+Number of calls: [31m1[39m
+Events stack: [31m[\\"e2\\"][39m"
+`;
+
+exports[`.toHaveFiredLastEventWith fails when last event fires without the correct payload 1`] = `
+"[2mexpect([22m[31mcomponent[39m[2m).[22mtoHaveFiredLastEventWith[2m([22m[32mexpected[39m[2m)[22m
+
+Expected: [32m100[39m
+Received: [31m50[39m
+
+Event: e2
+Number of calls: [31m1[39m
+Events stack: [31m[\\"e2\\"][39m"
+`;
+
+exports[`.toHaveFiredLastEventWith fails when no events were fired 1`] = `
+"Expected: [32m50[39m
+Received: [31m\\"no events\\"[39m"
+`;
+
+exports[`.toHaveFiredLastEventWith prints out all received payloads on fail 1`] = `
+"[2mexpect([22m[31mcomponent[39m[2m).[22mtoHaveFiredLastEventWith[2m([22m[32mexpected[39m[2m)[22m
+
+Expected: [32m100[39m
+Received: 
+	   0: [31m50[39m,
+	   1: [31m50[39m,
+	   2: [31m50[39m
+
+Event: e2
+Number of calls: [31m3[39m
+Events stack: [31m[\\"e2\\", \\"e2\\", \\"e2\\"][39m"
+`;

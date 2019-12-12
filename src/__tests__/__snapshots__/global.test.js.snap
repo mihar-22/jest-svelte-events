@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`global listen can listen to multiple events 1`] = `
+Object {
+  "e1": Object {
+    "calls": 1,
+    "payloads": Array [
+      null,
+    ],
+  },
+  "e2": Object {
+    "calls": 1,
+    "payloads": Array [
+      50,
+    ],
+  },
+  "e3": Object {
+    "calls": 1,
+    "payloads": Array [
+      100,
+    ],
+  },
+  "stack": Array [
+    "e1",
+    "e2",
+    "e3",
+  ],
+}
+`;
+
+exports[`global listen firing event should keep track of calls, payloads and stack 1`] = `
+Object {
+  "e1": Object {
+    "calls": 2,
+    "payloads": Array [
+      null,
+      null,
+    ],
+  },
+  "e2": Object {
+    "calls": 1,
+    "payloads": Array [
+      50,
+    ],
+  },
+  "stack": Array [
+    "e1",
+    "e1",
+    "e2",
+  ],
+}
+`;
+
+exports[`global listen listening to component should add it to global listeners object 1`] = `
+Object {
+  "e1": Object {
+    "calls": 0,
+    "payloads": Array [],
+  },
+  "stack": Array [],
+}
+`;

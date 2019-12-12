@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`.not.toHaveFiredEventTimes fails when event has fired correct number of times 1`] = `
+"[2mexpect([22m[31mcomponent[39m[2m).[22mnot[2m.[22mtoHaveFiredEventTimes[2m([22m[32mexpected[39m[2m)[22m
+
+Expected not to have fired e1: [32m1[39m time
+Recevied: [31m1[39m time
+
+Events stack: [31m[\\"e1\\"][39m"
+`;
+
+exports[`.toHaveFiredEventTimes fails when event has not fired correct number of times 1`] = `
+"[2mexpect([22m[31mcomponent[39m[2m).[22mtoHaveFiredEventTimes[2m([22m[32mexpected[39m[2m)[22m
+
+Expected to have fired e1: [32m2[39m times
+Recevied: [31m1[39m time
+
+Events stack: [31m[\\"e1\\"][39m"
+`;

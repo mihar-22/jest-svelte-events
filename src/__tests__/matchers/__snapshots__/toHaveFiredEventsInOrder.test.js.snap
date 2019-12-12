@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`.not.toHaveFiredEventsInOrder fails when given events that did fire in correct order 1`] = `
+"[2mexpect([22m[31mcomponent[39m[2m).[22mnot[2m.[22mtoHaveFiredEventsInOrder[2m([22m[32mexpected[39m[2m)[22m
+
+Expected not to have fired in order: [32m[\\"e1\\", \\"e2\\"][39m
+Recevied events in order: [31m[\\"e1\\", \\"e2\\"][39m"
+`;
+
+exports[`.toHaveFiredEventsInOrder fails when given events that did not fire in correct order 1`] = `
+"[2mexpect([22m[31mcomponent[39m[2m).[22mtoHaveFiredEventsInOrder[2m([22m[32mexpected[39m[2m)[22m
+
+Expected to have fired in order: [32m[\\"e1\\", \\"e2\\"][39m
+Recevied events in order: [31m[\\"e2\\", \\"e1\\"][39m"
+`;

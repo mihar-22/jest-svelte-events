@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`utils getters getEventData returns event data 1`] = `
+Object {
+  "calls": 0,
+  "payloads": Array [],
+}
+`;
+
+exports[`utils getters getEventData throws error when event has no listener registered 1`] = `
+"There are no listeners for the event \`e2\` on this component, setup the listener before calling the matcher.
+
+Eg: listen(component, 'myEvent')
+
+"
+`;
+
+exports[`utils getters getListener returns listener 1`] = `
+Object {
+  "e1": Object {
+    "calls": 0,
+    "payloads": Array [],
+  },
+  "stack": Array [],
+}
+`;
+
+exports[`utils getters getListener throws error when component has not been registered 1`] = `
+"This component has not been registered and has no listeners, setup the listener before calling the matcher.
+
+Eg: listen(component, 'myEvent')
+
+"
+`;
