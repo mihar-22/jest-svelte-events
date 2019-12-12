@@ -1,9 +1,9 @@
-import { matcherHint, printExpected, printReceived } from 'jest-matcher-utils'
 import { getListener, getEventData } from '../listen'
 
 const pluralize = count => `time${count === 1 ? '' : 's'}`
 
 export default function toHaveFiredEventTimes (component, event, times) {
+  const { matcherHint, printExpected, printReceived } = this.utils
   const listener = getListener(component)
   const eventData = getEventData(listener, event)
   const pass = eventData.calls === times

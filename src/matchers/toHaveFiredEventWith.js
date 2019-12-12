@@ -1,8 +1,8 @@
-import { matcherHint, printExpected, printReceived } from 'jest-matcher-utils'
 import { getListener, getEventData } from '../listen'
 import { isEqual } from 'underscore'
 
-export const buildMessage = (name, options, component, event, payload, showPayloads = false) => {
+export function buildMessage (name, options, component, event, payload, showPayloads = false) {
+  const { matcherHint, printExpected, printReceived } = this.utils
   const isNot = options.isNot
   const listener = getListener(component)
   const eventData = getEventData(listener, event)
@@ -31,5 +31,5 @@ export const buildMessage = (name, options, component, event, payload, showPaylo
 
 export default function toHaveFiredEventWith (component, event, payload) {
   const options = { isNot: this.isNot }
-  return buildMessage('toHaveFiredEventWith', options, component, event, payload)
+  return buildMessage.call(this, 'toHaveFiredEventWith', options, component, event, payload)
 }

@@ -1,9 +1,9 @@
-import { printExpected, printReceived } from 'jest-matcher-utils'
 import { getListener } from '../listen'
 
 import { buildMessage } from './toHaveFiredEventWith'
 
 export default function toHaveFiredNthEventWith (component, n, payload) {
+  const { printExpected, printReceived } = this.utils
   const listener = getListener(component)
   const event = listener.stack[n - 1]
   const options = { isNot: this.isNot }
@@ -16,7 +16,8 @@ export default function toHaveFiredNthEventWith (component, n, payload) {
     }
   }
 
-  return buildMessage(
+  return buildMessage.call(
+    this,
     'toHaveFiredNthEventWith',
     options,
     component,

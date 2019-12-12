@@ -1,7 +1,7 @@
-import { matcherHint, printExpected, printReceived } from 'jest-matcher-utils'
 import { getListener, getEventData } from '../listen'
 
 export default function toHaveFiredEvent (component, event) {
+  const { matcherHint, printExpected, printReceived } = this.utils
   const listener = getListener(component)
   const eventData = getEventData(listener, event)
   const pass = eventData.calls > 0

@@ -1,8 +1,8 @@
-import { matcherHint, printExpected, printReceived } from 'jest-matcher-utils'
 import { getListener } from '../listen'
 import { isEqual } from 'underscore'
 
 export default function toHaveFiredEventsInOrder (component, events) {
+  const { matcherHint, printExpected, printReceived } = this.utils
   const listener = getListener(component)
   const pass = isEqual(listener.stack, events)
   const options = { isNot: this.isNot }
